@@ -4,7 +4,7 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src/script21(CustomModels).js'),
+    entry: path.resolve(__dirname, '../src/script.js'),
     output:
     {
         filename: 'bundle.[contenthash].js',
@@ -80,6 +80,23 @@ module.exports = {
                         {
                             outputPath: 'assets/fonts/'
                         }
+                    }
+                ]
+            },
+            {
+                test: /\.(gltf)$/,
+                use: [
+                    {
+                        loader: "gltf-webpack-loader"
+                    }
+                ]
+            },
+            {
+                test: /\.(bin)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {}
                     }
                 ]
             }

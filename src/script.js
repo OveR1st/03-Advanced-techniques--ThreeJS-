@@ -5,6 +5,10 @@ import * as dat from 'dat.gui'
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
+// import { FlightHelmet } from '../static/models/FlightHelmet/glTF/FlightHelmet.gltf'
+
+// console.log(FlightHelmet)
+
 /**
  * Loaders
  */
@@ -16,9 +20,12 @@ const cubeTextureLoader = new THREE.CubeTextureLoader()
  * Models
  */
 // Hemlet
+console.log(require('../static/models/FlightHelmet/glTF/FlightHelmet.gltf'))
+// console.log(gltfLoader)
 gltfLoader.load(
-    '/models/FlightHelmet/glTF/FlightHelmet.gltf',
+    require('../static/models/FlightHelmet/glTF/FlightHelmet.gltf'),
     (gltf) => {
+      console.log(gltf)
         gltf.scene.scale.set(10,10,10)
         gltf.scene.position.set(0,-4,0)
         gltf.scene.rotation.y = Math.PI * 0.5
