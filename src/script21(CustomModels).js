@@ -21,11 +21,11 @@ const scene = new THREE.Scene()
 /**
  * Models
  */
-const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('/draco/')
-
+// const dracoLoader = new DRACOLoader()
+// dracoLoader.setDecoderPath('/draco/')
+//
 const gltfLoader = new GLTFLoader()
-gltfLoader.setDRACOLoader(dracoLoader)
+// gltfLoader.setDRACOLoader(dracoLoader)
 
 let mixer = null
 
